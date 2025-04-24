@@ -1,0 +1,1 @@
+# Cubrir investigación de tipos de ransomware y vectores de ataque típicos, nombrar o describir algunos casos recientes
