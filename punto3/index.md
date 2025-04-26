@@ -1,1 +1,8 @@
-# Análisis de de cómo funciona algún ransomware especifico, e.j que algoritmo usa para cifrar o incluso simulación de un delito donde se cubra desde la infección a cómo se pide rescate por los datos, pagos en cripto, mixers, técnicas que emplean de negociación..
+# Análisis de RYUK
+- Vectores de ataque
+- Entrada: Emotet
+- Propagación: TrickBot
+- Algoritmo que usa para cifrar
+- Delitos conocidos (SEPE, Ay. Jerez)
+  - técnicas empleadas de negociación
+  - pago de rescates, mixers
