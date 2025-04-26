@@ -1,4 +1,4 @@
-# Análisis de RYUK
+# Análisis de ransomware: RYUK
 - Vectores de ataque
 - Entrada: Emotet
 - Propagación: TrickBot
