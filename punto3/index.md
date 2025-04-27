@@ -60,3 +60,6 @@ No hay que pagar nunca un rescate ya que:
 
 Aun así muchas víctimas (sobretodo empresas pequeñas y medianas) pagan  rescates para recuperar sus datos:
 <https://www.darkreading.com/cyberattacks-data-breaches/how-to-negotiate-with-ransomware-attackers>
+
+Casi cada aparición del malware utilizó una billetera única. Poco después de que se realizara el pago del rescate, los fondos se dividieron para después transferirse a través de muchas otras cuentas.
+<https://www.itdigitalsecurity.es/vulnerabilidades/2018/08/ryuk-el-ransomware-sucesor-de-hermes-que-ya-ha-recaudado-mas-de-600000-dolares>
