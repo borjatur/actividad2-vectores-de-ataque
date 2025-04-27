@@ -5,6 +5,7 @@
 
 [Tipos Vectores](https://blog.scilabs.mx/principales-vectores-de-acceso-inicial-en-ataques-de-ransomware/)
 
+
 ## Ciclo de vida de un ataque ransomware
 <img src="./imágenes/vectors-ransomware-attack.jpeg" />
 
@@ -17,11 +18,12 @@ Ejemplo de acceso inicial, persistencia, elevación de privilegios, evasión de 
 
 [Vídeo explicación del proceso](https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s)
 
-Caracteristicas y funcionamiento de Emotet para inciar ataque a través de email:
+### Caracteristicas y funcionamiento de Emotet para inciar ataque a través de email:
+<a href="https://www.incibe.es/incibe-cert/blog/emotet-caracteristicas-y-funcionamiento" target="_blank">https://www.incibe.es/incibe-cert/blog/emotet-caracteristicas-y-funcionamiento</a>
 
-[Vídeo](https://www.incibe.es/incibe-cert/blog/emotet-caracteristicas-y-funcionamiento)
 
 Repositorio para obtener malware:
+
 [Emotet](https://github.com/jstrosch/malware-samples/tree/master/maldocs/emotet/2021/December)
 
 [Trickbot](https://github.com/jstrosch/malware-samples/tree/master/maldocs/trickbot/2018/November)
