@@ -17,7 +17,13 @@ Ryuk está basado en otro ransomware llamado Hermes (Lazarus group):
 La mayoría de los ataques de Ryuk Ransomware se pueden rastrear hasta el acceso a Protocolo de Escritorio Remoto o al phishing por correo electrónico como vector de ataque.
 <https://www.coveware.com/ryuk-ransomware>
 
+Vídeo: Funcionamiento de Ryuk
+<https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s>
+
 ## Entrada: Emotet
+
+Presentación del malware Emotet, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
+<a href="punto3/assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank">Presentación Emotet</a>
 
 ## Propagación: TrickBot
 
