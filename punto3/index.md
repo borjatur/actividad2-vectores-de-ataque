@@ -23,7 +23,7 @@ Vídeo: Funcionamiento de Ryuk
 ## Entrada: Emotet
 
 Presentación del malware Emotet, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
-<a href="punto3/assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank">Presentación Emotet</a>
+<a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank">Presentación Emotet</a>
 
 ## Propagación: TrickBot
 
