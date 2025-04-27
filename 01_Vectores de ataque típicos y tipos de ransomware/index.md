@@ -9,7 +9,7 @@
 <img src="./imágenes/vectors-ransomware-attack.jpeg" />
 
 ## Vídeo con explicación de técnicas, tácticas y procedimiento (TTP) de ransomware
-Ejemplo de Acceso inicial, persistencia, elevación de privilegios, evasión de defensas, movimientos laterales y exfiltración.
+Ejemplo de acceso inicial, persistencia, elevación de privilegios, evasión de defensas, movimientos laterales y exfiltración.
 [Vídeo](https://www.youtube.com/watch?v=-BZJ6Xz7DzI)
 
 ## Proceso de ataque con ransomware Ryuk con vector de ataque por Phising
@@ -18,6 +18,7 @@ Ejemplo de Acceso inicial, persistencia, elevación de privilegios, evasión de 
 [Vídeo explicación del proceso](https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s)
 
 Caracteristicas y funcionamiento de Emotet para inciar ataque a través de email:
+
 [Vídeo](https://www.incibe.es/incibe-cert/blog/emotet-caracteristicas-y-funcionamiento)
 
 Repositorio para obtener malware:
