@@ -14,8 +14,8 @@ Los ransomware son principalmente de dos tipos:
 
 **Ransomware de cifrado.** 
     Diseñado para cifrar los archivos más importantes de la víctima, como sus documentos, fotos y videos. El funcionamiento del equipo no se ve afectado. La víctima entra en pánico porque ve que sus archivos siguen allí, pero no puede abrirlos. Esta clase de malware muestra una leyenda en la que se exige el pago de un rescate y, por lo general, una cuenta regresiva. 
-
-[Tipos de ransomware]("https://latam.kaspersky.com/resource-center/threats/ransomware-attacks-and-types?srsltid=AfmBOoqFQnTcv9Tb6p8WIxBS0B-L1QO17qn0RtgAvjEU13NRy4e-ys4e")
+    
+[Tipos de ransomware](https://latam.kaspersky.com/resource-center/threats/ransomware-attacks-and-types?srsltid=AfmBOoqFQnTcv9Tb6p8WIxBS0B-L1QO17qn0RtgAvjEU13NRy4e-ys4e)
 
 [Ejemplos de grupos de ransomware conocidos](https://www.trendmicro.com/es_es/what-is/ransomware/ransomware-examples.html)
 
