@@ -98,6 +98,10 @@ CNN-CERT pone a disposicon de los usuarios un check list para la implementación
 Identificadas las medidas ayuda a evaluar la situación en la que se encuentra la empresa
 <img src="./assets/checlist.jpg" />
 
+Ver como realizar Plna de Contingencia y Continuidad de un negocio
+<a href="./assets/Plan_de_Contingencia_y_Continuidad_de_Negocio.pdf" target="_blank">Plan_de_Contingencia_y_Continuidad_de_Negocio</a>
+
+
 ## ANTI RANSOM COMO TRAMPA PARA CAPTURAR AL MALWARE. Honeypots o sistemas trampa
 
 Una de las formas de detectar las infecciones por ransomware es instalar en la maquina un sistema trampa o honeypot26, que actúa como
