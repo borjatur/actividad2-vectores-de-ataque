@@ -16,7 +16,7 @@ La implemenatación de la seguridad en las empreseas conlleva planificar y tener
 <img src="./assets/planseguridad.jpg" />
 
 
-## Medidadas de protección específcas basadas en los diferentes vectores de ataque
+## Medidas de protección específcas basadas en los diferentes vectores de ataque
 En este documento podemos encontrar una guia elaborada por la OSI (Oficina de seguridad del internauta) donde se enumeran las mediadas recomendadas para la protección ante los difernetes vectores de ataque (Ataques por fuerza bruta, Ataques basados en ingeniería social, Ataques a conexiones, Ataques por malware ... )
 <a href="./assets/osi-guia-ciberataques.pdf" target="_blank">osi-guia-ciberataques</a>
 
