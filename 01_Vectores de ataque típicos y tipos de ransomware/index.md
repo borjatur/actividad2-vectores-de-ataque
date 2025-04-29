@@ -51,7 +51,11 @@ Repositorio para obtener malware:
 
 ## Noticias sobre casos de ataques ransomware
 [Ataque al SEPE con ransomware Ryuk](https://www.esedsl.com/blog/ryuk-el-ransomware-que-consiguio-tumbar-las-defensas-del-sepe-y-que-amenaza-a-cualquier-empresa)
+
 [Ataque al Clinic de Barcelona](https://www.20minutos.es/tecnologia/ciberseguridad/todo-sobre-el-ciberataque-que-tiene-en-jaque-a-barcelona-quien-esta-detras-como-ha-sido-el-hackeo-y-por-que-se-eligio-el-clinic-5107297/) 
+
 [Filtración de datos de la empresa National Public Data](https://www.welivesecurity.com/es/privacidad/brecha-npd-se-convierte-una-mas-importantes-historia/)
+
 [Casos de ransomware a nivel global en 2024](https://www.welivesecurity.com/es/privacidad/filtraciones-datos-2024-se-cuentan-miles-millones/)
+
 [Evolución de ransomware en 2025](https://www.cyfirma.com/research/tracking-ransomware-february-2025/)
