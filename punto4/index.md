@@ -26,50 +26,63 @@ En concreto frente a un ataque por Ransomeware como RYUK las medidas de protecci
 importantes.** Es necesario mantener dichas copias aisladas y
 sin conectividad con otros sistemas, evitando así el acceso
 desde equipos infectados.
+
 - **Mantener el sistema actualizado con los últimos parches de
 seguridad,** tanto para el sistema operativo como para el software
 que hubiere instalado.
+
 - **Políticas BYOD (Bring Your Own Device).** Cada vez es más
 habitual son un potencial vector de infección y es por ello por lo que es
 imprescindible definir unas reglas de seguridad.
+
 - **Contraseñas seguras.** 
+
 - **Mantener una primera línea de defensa con las últimas firmas
 de código dañino (antivirus),** además de disponer de una correcta
 configuración de los cortafuegos a nivel de aplicación
 (basado en listas blancas de aplicaciones permitidas).
+
 - **Disponer de sistemas antispam a nivel de correo electrónico
 y establecer un nivel de filtrado alto.** De esta manera, se reducen
 las posibilidades de infección a través de campañas masivas
 de ransomware por correo electrónico.
+
 - **Establecer políticas de seguridad en el sistema para impedir
 la ejecución de ficheros desde directorios comúnmente utilizados
 por el ransomware (App Data, Local App Data, etc.).** Herramientas
 como AppLocker, Cryptoprevent o CryptoLocker
 Prevention Kit permiten crear fácilmente dichas políticas.
+
 - **Bloquear el tráfico relacionado con dominios y servidores C2
 mediante un IDS/IPS, evitando así la comunicación entre el código
 dañino y el servidor de mando y control.**
+
 - **No utilizar cuentas con privilegios de administrador,** lo que
 permite reducir el potencial impacto de la acción de un ransomware.
+
 - **Mantener listas de control de acceso para las unidades mapeadas
 en red.** En caso de infección, el cifrado se producirá en
 todas las unidades de red mapeadas en el equipo víctima. Restringiendo
 los privilegios de escritura en red se mitigará parcialmente
 el impacto
+
 - **Se recomienda el empleo de bloqueadores de Javascript para
 el navegador, como por ejemplo “Privacy Manager”, que impide
 la ejecución de todos aquellos scripts que puedan suponer un
 daño para nuestro equipo.** De este modo se reducen las opciones
 de infección desde la web (Web Exploit Kits).
+
 - **Mostrar extensiones para tipos de fichero conocidos, con el
 fin de identificar posibles archivos ejecutables que pudieren
 hacerse pasar por otro tipo de fichero.**
+
 - **Adicionalmente, se recomienda la instalación de la herramienta
 “Anti Ransom”, que tratará de bloquear el proceso de
 cifrado de un ransomware (monitorizando “honey files”).** Además,
 esta aplicación realizará un volcado de la memoria del
 código dañino en el momento de su ejecución, en el que con
 suerte se puede hallar la clave de cifrado que estuviera empleándose.
+
 - **Finalmente, el empleo de máquinas virtuales evitará en un alto
 porcentaje de casos la infección por ransomware.** Debido a las
 técnicas anti-debug y anti-virtualización comúnmente presentes
@@ -125,18 +138,18 @@ La herramienta Monitor de Recursos de Windows.
 Para acceder a ella, basta con ejecutar “resmon” (tecla
 Windows + r).
 Se debe prestar atención a lo siguiente:
-    **Procesos de aplicaciones que realmente no se estén ejecutando:**
+    - **Procesos de aplicaciones que realmente no se estén ejecutando:**
     si se observa que en la lista de procesos aparece uno con el nombre
     de una aplicación como, por ejemplo, “notepad.exe” o “calc.
     exe”, y dicha aplicación realmente no está abierta, es muy probable
     que se trate de un proceso dañino disfrazado de aplicación inocua.
-    **Identificar procesos repetidos con diferente PID8: si aparecen varias
+    - **Identificar procesos repetidos con diferente PID8: si aparecen varias
     veces procesos con el mismo nombre, estos pueden ser identificados
     mediante su PID.** Todos esos procesos deben depender
     de uno original y ser parte de su árbol de procesos. En el caso de
     que haya alguno fuera de ese árbol, probablemente se trate de un
     proceso dañino.
-    **Procesos con una gran cantidad de ficheros abiertos o con un
+    - **Procesos con una gran cantidad de ficheros abiertos o con un
     excesivo uso de la CPU o del disco:** el proceso de cifrado es costoso
     en cuanto al consumo de recursos, por lo que el proceso atacante
     usará una gran cantidad de los mismos, sobre todo CPU y
