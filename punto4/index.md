@@ -85,11 +85,30 @@ CNN-CERT pone a disposicon de los usuarios un check list para la implementación
 Identificadas las medidas ayuda a evaluar la situación en la que se encuentra la empresa
 <img src="./assets/checlist.jpg" />
 
-## ANTI RANSOM COMO TRAMPA PARA CAPTURAR AL MALWARE
+## ANTI RANSOM COMO TRAMPA PARA CAPTURAR AL MALWARE. Honeypots o sistemas trampa
+
+Una de las formas de detectar las infecciones por ransomware es instalar en la maquina un sistema trampa o honeypot26, que actúa como
+señuelo que delata la presencia del código dañino.
+
 Anti Ramson, una aplicación de código abierto capaz de detectar y detener los ataques de ransomware, sin importar su categoría. 
 
 En primer lugar, la herramienta crea una carpeta de señuelo al azar con muchos documentos sin utilidad, por ejemplo Excel, PDF o Word, y lleva a cabo una supervisión para ver si se producen cambios. En caso de que el sistema detecte que ha tenido lugar algún cambio, trata de identificar los procesos responsables de esta alteración, los detiene y vuelca la memoria de los procesos, con la esperanza de que la clave o la contraseña que utiliza el virus para cifrar los archivos esté en su interior.
 
 En este enlace se encuentran las instrucciones para la preparación del entorno señuelo y la instalación de la aplicación:
-
 <https://www.security-projects.com/?Anti_Ransom>
+
+## File History para almacenar copias de seguridad en un medio extraíble y Shadow Copies
+La medida más efectiva contra el ransomware es disponer siempre de
+varias copias de respaldo de todos los ficheros importantes. De hecho,
+la extorsión sólo se da cuando el ransomware atacante ha conseguido
+cifrar ficheros que son únicos e irrecuperables y no queda más remedio
+que pagar el rescate si se quieren recuperar. Es esencial disponer
+de al menos una copia de seguridad de todos los ficheros importantes,
+de modo que se pueda recurrir a esa copia de respaldo cuando haga
+falta recuperarlos.
+
+Es muy importante establecer políticas de respaldo e implementar copias fuera de la red
+En este video se muestran los aspectos a considerar a la hora de definir las políticas de respaldo.
+[Vídeo](https://www.youtube.com/watch?v=NXkhXNFaKbs)
+
+
