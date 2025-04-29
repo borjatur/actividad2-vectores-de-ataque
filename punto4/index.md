@@ -112,3 +112,55 @@ En este video se muestran los aspectos a considerar a la hora de definir las pol
 [Vídeo](https://www.youtube.com/watch?v=NXkhXNFaKbs)
 
 
+## Cómo actuar en caso de ser infectado
+
+PRIMER PASO **Desconectar el equipo de la red** Con esto se consigue:
+- Evitar que la acción de cifrado alcance al contenido alojado en
+las unidades de red accesibles desde el equipo infectado.
+- Eludir que el código dañino pueda contactar con su servidor de
+mando y control.
+
+SEGUNDO PASO **Tratar de identificar el proceso dañino**
+La herramienta Monitor de Recursos de Windows.
+Para acceder a ella, basta con ejecutar “resmon” (tecla
+Windows + r).
+Se debe prestar atención a lo siguiente:
+    **Procesos de aplicaciones que realmente no se estén ejecutando:**
+    si se observa que en la lista de procesos aparece uno con el nombre
+    de una aplicación como, por ejemplo, “notepad.exe” o “calc.
+    exe”, y dicha aplicación realmente no está abierta, es muy probable
+    que se trate de un proceso dañino disfrazado de aplicación inocua.
+    **Identificar procesos repetidos con diferente PID8: si aparecen varias
+    veces procesos con el mismo nombre, estos pueden ser identificados
+    mediante su PID.** Todos esos procesos deben depender
+    de uno original y ser parte de su árbol de procesos. En el caso de
+    que haya alguno fuera de ese árbol, probablemente se trate de un
+    proceso dañino.
+    **Procesos con una gran cantidad de ficheros abiertos o con un
+    excesivo uso de la CPU o del disco:** el proceso de cifrado es costoso
+    en cuanto al consumo de recursos, por lo que el proceso atacante
+    usará una gran cantidad de los mismos, sobre todo CPU y
+    acceso a disco.
+
+TERCER PASO **Identifiar el Ransomware**
+Es importante conocer qué variante de ransomware ha infectado los
+equipos afectados, y para ello se puede utilizar alguno de estos servicios:
+**NoMoreRansom o IDRansomware**
+
+Existe una utilidad, frecuentemente actualizada, que recopila información sobre todas las familias de ransomware conocidas (herramientas
+de recuperación, fechas de aparición, etc.). Se recomienda consultarla si se ha sido víctima de una infección, de manera que se pueda conocer
+la información disponible sobre el ataque y, si fuera necesario, conseguir una herramienta de recuperación. Esta herramienta se puede encontrar
+en el siguiente enlace:
+<https://docs.google.com/spreadsheets/d/1TWS238xacAtofLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g/pubhtml>
+
+- Inicia el equipo Windows en modo seguro con funciones de red
+- Eliminar el ransomware con una herramienta de tipo cleaner
+- Realizar un segundo análisis para confirmar que el equipo está limpio
+- Restaurar los archivos cifrados por el ransomware
+
+**MITIGIAR LOS EFECTOS**
+Una vez se ha sufrido una infección y los ficheros han sido cifrados,
+estos se pueden recuperar por distintos medios:
+- Mediante una herramienta especifica de descifrado 
+- A través de la restauración del sistema, que permite recuperar los ficheros cifrados.
+
