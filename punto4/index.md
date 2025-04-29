@@ -26,4 +26,5 @@ En concreto frente a un ataque por Ransomeware como RYUK las medidas de protecci
 CNN-CERT pone a disposicon de los usuarios un check list para la implementación de medidas de protección frente al ataque ransomware
 <a href="./assets/Checklist CCN-CERT BP-04 Ransomware ES.xlsx" target="_blank">Checklist CCN-CERT BP-04 Ransomware</a>
 
-
+Identificadas las medidas ayuda a evaluar la situación en la que se encuentra la empresa
+<img src="./assets/checlist.jpg" />
