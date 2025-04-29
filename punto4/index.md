@@ -18,4 +18,4 @@ La implemenatación de la seguridad en las empreseas conlleva planificar y tener
 En este documento podemos encontrar una guia elaborada por la OSI (Oficina de seguridad del internauta) donde se enumeran las mediadas recomendadas para la protección ante los difernetes vectores de ataque (Ataques por fuerza bruta, Ataques basados en ingeniería social, Ataques a conexiones, Ataques por malware ... )
 
 En concreto frente a un ataque por Ransomeware como RYUK las medidas de protección son comunes con otro tipo de malware, como mantener el equipo actualizado y las medidas de protección activadas (antivirus). También, evitar ejecutar archivos, links o utilizar dispositivos USB de dudosa procedencia.
-<a href="./assets/osi-guia-ciberataques.pdf" target="_blank">Presentación Emotet</a>
+<a href="./assets/osi-guia-ciberataques.pdf" target="_blank">osi-guia-ciberataques</a>
