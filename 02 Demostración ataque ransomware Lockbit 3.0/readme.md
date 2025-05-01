@@ -4,6 +4,10 @@
 
 ## Índice de contenido
 
-1. <video src="assets/01_preparacion_maquina_virtual.mp4" controls>Preparación de la máquina virtual</video>
+1. Preparación máquina virtual
+
+   https://github.com/user-attachments/assets/75d460ac-49d1-444f-8dc6-1d2b2f9e3046
+
+2. Foo 
 
 
