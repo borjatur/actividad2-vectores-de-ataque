@@ -1,1 +1,0 @@
-# Simulación de ataque ransomware (aportar vídeos, documentación, hacer videos de como infectar en entorno seguro)
