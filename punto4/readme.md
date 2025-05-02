@@ -1,5 +1,15 @@
 # Prevención de ataques, que se puede hacer, cuales son las técnicas, estándares o herramientas que se deberían emplear para mitigar o incluso recuperarse de un ataque, e.j. gestión de backups
 
+## Índice de contenidos
+1. Decálogo básico de seguridad
+2. Implementación de seguridad en las empresas
+3. Medidas de protección específcas basadas en los diferentes vectores de ataque
+4. Ejemplo implantacón Plan de Seguridad
+5. Honeypots o sistemas trampa
+6. Copias de seguridad. File History para almacenar en un medio extraíble y Shadow Copies
+7. Cómo actuar en caso de ser infectado
+
+
 ## Decálogo básico de seguridad
 A modo genérico para cualquier tipo de ataque, la concienciación, el sentido común y las buenas prácticas son las mejores defensas.
 
@@ -93,7 +103,7 @@ entorno virtualizado su acción no llega a materializarse.
 Adicionalmente, se puedene encontrar en esta página otras medidas de prevención a nivel de usuario:
 <https://www.nomoreransom.org/es/prevention-advice-for-users.html>
 
-## EJEMPLO PLAN DE IMPLANTACIÓN SEGURIDAD
+## Ejemplo implantacón Plan de Seguridad
 CNN-CERT pone a disposicon de los usuarios un check list para la implementación de medidas de protección frente al ataque ransomware
 <a href="./assets/Checklist CCN-CERT BP-04 Ransomware ES.xlsx" target="_blank">Checklist CCN-CERT BP-04 Ransomware</a>
 
@@ -119,7 +129,7 @@ Este video muestra como instalar y como se comporta la aplicación señuelo:
 En este enlace se encuentran las instrucciones para la preparación del entorno señuelo y la instalación de la aplicación:
 <https://www.security-projects.com/?Anti_Ransom>
 
-## File History para almacenar copias de seguridad en un medio extraíble y Shadow Copies
+## Copias de seguridad. File History para almacenar en un medio extraíble y Shadow Copies
 La medida más efectiva contra el ransomware es disponer siempre de
 varias copias de respaldo de todos los ficheros importantes. De hecho,
 la extorsión sólo se da cuando el ransomware atacante ha conseguido
