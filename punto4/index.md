@@ -112,6 +112,9 @@ señuelo que delata la presencia del código dañino.
 Anti Ramson, una aplicación de código abierto capaz de detectar y detener los ataques de ransomware, sin importar su categoría. 
 
 En primer lugar, la herramienta crea una carpeta de señuelo al azar con muchos documentos sin utilidad, por ejemplo Excel, PDF o Word, y lleva a cabo una supervisión para ver si se producen cambios. En caso de que el sistema detecte que ha tenido lugar algún cambio, trata de identificar los procesos responsables de esta alteración, los detiene y vuelca la memoria de los procesos, con la esperanza de que la clave o la contraseña que utiliza el virus para cifrar los archivos esté en su interior.
+Este video muestra como instalar y como se comporta la aplicación señuelo:
+<https://www.youtube.com/watch?v=zWaTBwxE50k&t=35s>
+
 
 En este enlace se encuentran las instrucciones para la preparación del entorno señuelo y la instalación de la aplicación:
 <https://www.security-projects.com/?Anti_Ransom>
