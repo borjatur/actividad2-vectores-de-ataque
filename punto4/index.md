@@ -90,6 +90,8 @@ en este tipo de código dañino, se ha demostrado que en un
 entorno virtualizado su acción no llega a materializarse.
 <a href="./assets/CCN-CERT_BP_04_Ransomware.pdf" target="_blank">CCN-CERT_BP_04_Ransomware</a>
 
+Adicionalmente, se puedene encontrar en esta página otras medidas de prevención a nivel de usuario:
+<https://www.nomoreransom.org/es/prevention-advice-for-users.html>
 
 ## EJEMPLO PLAN DE IMPLANTACIÓN SEGURIDAD
 CNN-CERT pone a disposicon de los usuarios un check list para la implementación de medidas de protección frente al ataque ransomware
