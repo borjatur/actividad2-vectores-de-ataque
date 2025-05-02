@@ -1,4 +1,4 @@
-# Cubrir investigación de tipos de ransomware y vectores de ataque típicos, nombrar o describir algunos casos recientes
+# Vectores de ataque típicos y tipos de ransomware
 
 ## Tipos de vectores de ataque para ransomware
 <img src="./assets/vectores-de-acceso-img.jpg" />
