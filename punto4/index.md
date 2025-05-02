@@ -175,9 +175,8 @@ en el siguiente enlace:
 - Realizar un segundo análisis para confirmar que el equipo está limpio
 - Restaurar los archivos cifrados por el ransomware
 
-**MITIGIAR LOS EFECTOS**
+**MITIGAR LOS EFECTOS**
 Una vez se ha sufrido una infección y los ficheros han sido cifrados,
 estos se pueden recuperar por distintos medios:
-- Mediante una herramienta especifica de descifrado 
+- Mediante una herramienta especifica de descifrado <https://www.nomoreransom.org/es/decryption-tools.html>
 - A través de la restauración del sistema, que permite recuperar los ficheros cifrados.
-
