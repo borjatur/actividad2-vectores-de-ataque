@@ -1,10 +1,10 @@
-# Memoria actividad vectores de ataque Seguridad en los Sistemas de Información
+# Memoria actividad Vectores de Ataque - Seguridad en los Sistemas de Información
 
 ## Integrantes del grupo
 
 * Borja Tur Acosta
 * Marta Maria Boudet Marin
-* Manuel Segura
+* Manuel Segura Pellisa
 * Raúl De León De la Fuente
 
 ## Índice de contenidos
@@ -26,9 +26,14 @@ Los siguientes puntos quedarían cubiertos en el apartado `02 Demostración ataq
 * Intento de infección con seguridad activa
 * Infección con antivirus desactivado
 
-### 3) Análisis de RYUK y Emotet
+### 3) Análisis de un ransomware: RYUK
 
-Análisis de de cómo funciona algún ransomware especifico (RYUK), e.j que algoritmo usa para cifrar o incluso simulación de un delito donde se cubra desde la infección a cómo se pide rescate por los datos, pagos en cripto, mixers, técnicas que emplean de negociación... (Manuel)
+Análisis de de cómo funciona un ransomware especifico, RYUK:
+- Origen
+- Vectores de ataque
+- Infección y propagación
+- Algoritmo de cifrado
+- Rescate
 
 ### 4) Prevención de ataques y medidas de seguridad
 
