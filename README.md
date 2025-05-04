@@ -28,8 +28,8 @@ Los siguientes puntos quedarían cubiertos en el apartado `02 Demostración ataq
 
 ### 3) Análisis de RYUK y Emotet
 
-Análisis de de cómo funciona algún ransomware especifico (RYUK), e.j que algoritmo usa para cifrar o incluso simulación de un delito donde se cubra desde la infección a cómo se pide rescate por los datos, pagos en cripto, mixers, técnicas que emplean de negociación... (Manuel)
+Análisis de de cómo funciona algún ransomware especifico (RYUK), e.j que algoritmo usa para cifrar o incluso simulación de un delito donde se cubra desde la infección a cómo se pide rescate por los datos, pagos en cripto, mixers, técnicas que emplean de negociación... 
 
 ### 4) Prevención de ataques y medidas de seguridad
 
-Prevención de ataques, que se puede hacer, cuales son las técnicas, estándares o herramientas que se deberían emplear para mitigar o incluso recuperarse de un ataque, e.j. gestión de backups. (marta)
+Prevención de ataques, que se puede hacer, cuales son las técnicas, estándares o herramientas que se deberían emplear para mitigar o incluso recuperarse de un ataque, e.j. gestión de backups. 
