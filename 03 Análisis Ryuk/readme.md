@@ -2,7 +2,14 @@
 
 Ryuk es un malware que pertenece a la categoría de los ransomware. En la mayoría de los casos este tipo de malware tienen por objetivo cifrar los archivos de una máquina víctima para dejarlos inaccesibles y luego extorsionar a la misma pidiéndole un pago, en criptomonedas, por la recuperación de sus archivos.
 El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección. Ryuk depende de todo un complejo sistema de malware empleado para su entrada y propagación.
- 
+
+## Funcionamiento
+
+Borrar:<https://protecciondatos-lopd.com/empresas/ryuk-ransomware/>
+- Algunas de las informaciones de este análisis pertenencen a las conclusiones del TFM de Ciberseguridad de la UNED: <a href="https://e-spacio.uned.es/entities/publication/2512f1be-f2c6-4345-9023-825dc1f273eb" target="_blank"> 'Análisis del ransomware Ryuk</a>, impacto en los sistemas afectados y técnicas API Hooking y de aprendizaje automático como medidas de mitigación ante el ransomware', realizado por Héctor Santamaría Claro
+- Vídeo: Funcionamiento de Ryuk
+<https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s>
+
 ## Origen
 
 Ryuk está basado en otro ransomware llamado Hermes, relacionado con el grupo cibercriminal `Lazarus group`:
@@ -14,31 +21,22 @@ El ransomware Ryuk es más lucrativo que su predecesor. Se dirige a grandes orga
 
 En un principio se sospechó que su operador fuese un solo grupo vinculado a la inteligencia de Corea del Norte, dados los antecedentes de Hermes, aunque parece que los piratas informáticos detrás del amenazante ransomware Ryuk en realidad se extienden a través de dos o más organizaciones cibercriminales prolíficas, que parecen provenir de Rusia o antiguos estados satélites. Se han encontrado puebas que su principal operador es el grupo <a href="https://apt.etda.or.th/cgi-bin/showcard.cgi?g=UNC1878&n=1" target="_blank"> UNC1878</a>, asociado a la organización <a href="https://attack.mitre.org/groups/G0102/" target="_blank">Wizard Spider</a>. Al principio Ryuk compartió mucho código con Hermes, pero con el tiempo Wizard Spider modificó mucho más a Ryuk. 
 
-
-## Funcionamiento
-
-
-Borrar:<https://protecciondatos-lopd.com/empresas/ryuk-ransomware/>
-- Algunas de las informaciones de este análisis pertenencen a las conclusiones del TFM de Ciberseguridad de la UNED: <a href="https://e-spacio.uned.es/entities/publication/2512f1be-f2c6-4345-9023-825dc1f273eb" target="_blank"> 'Análisis del ransomware Ryuk</a>, impacto en los sistemas afectados y técnicas API Hooking y de aprendizaje automático como medidas de mitigación ante el ransomware', realizado por Héctor Santamaría Claro
-- Vídeo: Funcionamiento de Ryuk
-<https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s>
-
 ## Vectores de ataque
 
 La mayoría de los ataques de Ryuk Ransomware se pueden rastrear hasta el acceso a Protocolo de Escritorio Remoto o al phishing por correo electrónico como <a href="https://www.coveware.com/ryuk-ransomware" target="_blank">vectores de ataque</a>
 
 Respecto al phishing, como ocurre con muchos ataques de malware, el método de envío es malspam. Los correos electrónicos suelen enviarse desde una dirección falsa, por lo que el nombre del remitente no levanta sospechas. Cada campaña es única y está diseñada a medida para cada víctima (ya sea una organización, un sector o un individuo):
 <img src="./assets/malspam_Ryuk.png" />
-Con este tipo de correos se adjuntaría algun archivo de Office, que al abrirlo, ejecutaría una macro maliciosa con un comando de PowerShell que intenta descargar el troyano bancario Emotet
+Con este tipo de correos se adjuntaría algun archivo de Office o PDF 'falso', que al abrirlo, ejecutaría una macro o código malicioso con un comando de PowerShell con el objetivo de descargar el troyano bancario `Emotet`
 
 ## Entrada: Emotet
-Una vez en el equipo de la víctima, este troyano puede descargar malware adicional en el equipo infectado, pero su misón principal es recuperar y ejecutar Trickbot, cuya carga útil principal es spyware. 
+Una vez en el equipo de la víctima, este troyano puede descargar malware adicional en el equipo infectado, pero su misón principal es recuperar y ejecutar `Trickbot`, cuya carga útil principal es spyware. 
 - <a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank"> Presentación del malware Emotet </a>, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
 - Según varias informaciones, la botnet de EMOTET fue supuestamente <a href="https://blog.elhacker.net/2021/01/europol-desmantela-emotet-la-botnet-de-malware-mas-grande-del-mundo-troyano-bancario.html" target="_blank"> desmantelada</a> en enero de 2021
 
 ## Propagación: TrickBot
 
-TrickBot es un tipo de malware bancario troyano diseñado para robar información financiera de los usuarios infectando ordenadores. Muchas de sus características fueron inspiradas por otro troyano bancario llamado Dyreza. Desde junio de 2019, se observó una relación cada vez más estrecha entre las infecciones iniciales de TrickBot y los eventuales ataques de ransomware Ryuk.
+`TrickBot` es un tipo de malware bancario troyano diseñado para robar información financiera de los usuarios infectando ordenadores. Muchas de sus características fueron inspiradas por otro troyano bancario llamado `Dyreza`. Desde junio de 2019, se observó una relación cada vez más estrecha entre las infecciones iniciales de TrickBot y los eventuales ataques de ransomware Ryuk.
 
 TrickBot utiliza un enfoque modular para permitir a los atacantes agregar rápidamente funcionalidad al troyano base según sea necesario una vez que una máquina está infectada. Los atacantes aprovechan los módulos para agregar una variedad de funcionalidades y nuevos vectores de ataque.
 
