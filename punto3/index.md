@@ -1,64 +1,68 @@
 # Análisis de ransomware: RYUK
 
+Ryuk es un malware que pertenece a la categoría de los ransomware. En la mayoría de los casos este tipo de malware tienen por objetivo cifrar los archivos de una máquina víctima para dejarlos inaccesibles y luego extorsionar a la misma pidiéndole un pago, en criptomonedas, por la recuperación de sus archivos.
+El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección. Ryuk depende de todo un complejo sistema de malware empleado para su entrada y propagación.
+ 
 ## Origen
 
-Ryuk es un malware que pertenece a la categoría de los ransomware. En la mayoría de los casos este tipo de malware tienen por objetivo cifrar los archivos de una máquina víctima para dejarlos inaccesibles y luego extorsionar a la misma pidiéndole un pago, en criptomonedas, por la recuperación de sus archivos.
-
-Ryuk está basado en otro ransomware llamado Hermes (Lazarus group):
-
-<https://malpedia.caad.fkie.fraunhofer.de/details/win.hermes>
-
-<https://web.archive.org/web/20200922165625/https://dcso.de/2019/03/18/enterprise-malware-as-a-service/>
-
-<https://baesystemsai.blogspot.com/2017/10/taiwan-heist-lazarus-tools.html>
+Ryuk está basado en otro ransomware llamado Hermes, relacionado con el grupo cibercriminal `Lazarus group`:
+- <https://malpedia.caad.fkie.fraunhofer.de/details/win.hermes>
+- <https://web.archive.org/web/20200922165625/https://dcso.de/2019/03/18/enterprise-malware-as-a-service/>
+- <https://baesystemsai.blogspot.com/2017/10/taiwan-heist-lazarus-tools.html>
 
 El ransomware Ryuk es más lucrativo que su predecesor. Se dirige a grandes organizaciones y agencias gubernamentales que terminan pagando grandes cantidades. La verdad es que, sin los grandes beneficios, procesar los ataques de Ryuk no es sostenible. Implica un alto grado de procesos manuales (explotación directa, solicitudes de pago manejadas por correo electrónico, etc.) y los atacantes no quieren perder el tiempo si el ROI no es bueno.
 
 En un principio se sospechó que su operador fuese un solo grupo vinculado a la inteligencia de Corea del Norte, dados los antecedentes de Hermes, aunque parece que los piratas informáticos detrás del amenazante ransomware Ryuk en realidad se extienden a través de dos o más organizaciones cibercriminales prolíficas, que parecen provenir de Rusia o antiguos estados satélites. Se han encontrado puebas que su principal operador es el grupo <a href="https://apt.etda.or.th/cgi-bin/showcard.cgi?g=UNC1878&n=1" target="_blank"> UNC1878</a>, asociado a la organización <a href="https://attack.mitre.org/groups/G0102/" target="_blank">Wizard Spider</a>. Al principio Ryuk compartió mucho código con Hermes, pero con el tiempo Wizard Spider modificó mucho más a Ryuk. 
 
 
-
-
 ## Funcionamiento
 
-- El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección. Ryuk depende de todo un sistema de malware empleado para su entrada y propagación.
+
 Borrar:<https://protecciondatos-lopd.com/empresas/ryuk-ransomware/>
 - Algunas de las informaciones de este análisis pertenencen a las conclusiones del TFM de Ciberseguridad de la UNED: <a href="https://e-spacio.uned.es/entities/publication/2512f1be-f2c6-4345-9023-825dc1f273eb" target="_blank"> 'Análisis del ransomware Ryuk</a>, impacto en los sistemas afectados y técnicas API Hooking y de aprendizaje automático como medidas de mitigación ante el ransomware', realizado por Héctor Santamaría Claro
 - Vídeo: Funcionamiento de Ryuk
 <https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s>
 
-### Vectores de ataque
+## Vectores de ataque
 
 La mayoría de los ataques de Ryuk Ransomware se pueden rastrear hasta el acceso a Protocolo de Escritorio Remoto o al phishing por correo electrónico como <a href="https://www.coveware.com/ryuk-ransomware" target="_blank">vectores de ataque</a>
 
 Respecto al phishing, como ocurre con muchos ataques de malware, el método de envío es malspam. Los correos electrónicos suelen enviarse desde una dirección falsa, por lo que el nombre del remitente no levanta sospechas. Cada campaña es única y está diseñada a medida para cada víctima (ya sea una organización, un sector o un individuo):
 <img src="./assets/malspam_Ryuk.png" />
+Con este tipo de correos se adjuntaría algun archivo de Office, que al abrirlo, ejecutaría una macro maliciosa con un comando de PowerShell que intenta descargar el troyano bancario Emotet
 
-### Entrada: Emotet
+## Entrada: Emotet
+Una vez en el equipo de la víctima, este troyano puede descargar malware adicional en el equipo infectado, pero su misón principal es recuperar y ejecutar Trickbot, cuya carga útil principal es spyware. 
+- <a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank"> Presentación del malware Emotet </a>, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
+- Según varias informaciones, la botnet de EMOTET fue supuestamente <a href="https://blog.elhacker.net/2021/01/europol-desmantela-emotet-la-botnet-de-malware-mas-grande-del-mundo-troyano-bancario.html" target="_blank"> desmantelada</a> en enero de 2021
+- Es por ese y otros motivos que el que parece ser el sucesor de RYUK, <a href="https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/" target="_blank">Conti</a>, utiliza otros vectores de ataque y malware de apoyo para su cometido
 
-Presentación del malware Emotet, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
-<a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank">Presentación Emotet</a>
-Según varias informaciones, la botnet de EMOTET fue supuestamente desmantelada en enero de 2021
-<https://blog.elhacker.net/2021/01/europol-desmantela-emotet-la-botnet-de-malware-mas-grande-del-mundo-troyano-bancario.html>
-Es por ese y otros motivos que el que parece ser el sucesor de RYUK, Conti, utiliza otros vectores de ataque y malware de apoyo para su cometido
-<a href="https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/" target="_blank">Conti, el sucesor deRyuk</a>
 
-### Propagación: TrickBot y Bazaarloader
+## Propagación: TrickBot y Bazaarloader
+
+Gracias a Emotet, Trickbot entra en el sistema:
+- Se ejecuta y recopila credenciales
+- Roba credenciales para propagarse por la red mediante PsExec, WMI, PowerShell o directivas de grupo
+- Realiza escalada de privilegios
+- Intenta evadir los controles de seguridad de endpoints
+- Elimina instantáneas mediante "vssadmin"
+- Obtiene persistencia mediante el "Programador de Tareas" y permite acceder a los atacantes lateralmente a activos críticos conectados a la red
+- Dado que TrickBot es un troyano bancario, también es probable que haya recopilado y exfiltrado información de cuentas financieras en los sistemas infectados antes de instalar la infección con el ransomware Ryuk
+
+Bazaarloader:
+
 Borrar:<https://protecciondatos-lopd.com/empresas/trickbot/>
-Dado que TrickBot es un troyano bancario, es probable que haya recopilado y exfiltrado información de cuentas financieras en los sistemas infectados antes de instalar la infección con el ransomware Ryuk.
 
+## Proceso Infección y Cifrado
 
-### Proceso Infección y Cifrado
-Una vez en un sistema, Ryuk roba credenciales para propagarse por la red mediante PsExec, WMI, PowerShell o directivas de grupo, intentando infectar el mayor número posible de endpoints y servidores, evadiendo los controles de endpoints.
+Una vez en un sistema y gracias al control y privilegos ganados con Trickbot, Ryuk escanea los sistemas infectados y cifra casi todos los archivos, directorios, recursos de la red, unidades, etc... atacando específicamente las copias de seguridad. Hay que tener en cuenta que la recuperación del sistema se ha inhibido previamente mediante la destrucción de copias de instantáneas de volumen (VSS) a través de vssadmin. 
 
-Ryuk escanea los sistemas infectados y cifra casi todos los archivos, directorios, recursos de la red, unidades, etc... atacando específicamente las copias de seguridad. La recuperación del sistema se inhibe mediante la destrucción de copias de instantáneas de volumen (VSS) a través de vssadmin. 
+- Ryuk utiliza un modelo de cifrado de tres niveles. El primer nivel (base) es el cifrado asimétrico con el par de claves RSA que poseen los atacantes. La clave privada de este par de claves no está disponible para la víctima hasta que se adquiere un descifrador. El segundo nivel es un par de claves RSA por víctima. La mayoría de los ransomware generan este par de claves durante el proceso de cifrado y cifran la clave privada resultante utilizando la clave global del primer nivel. Con Ryuk, el ransomware llega con el par de claves preinstalado y la clave privada precifrada. El tercer nivel es una clave de cifrado simétrico AES estándar generada para cada archivo de la víctima mediante la función CryptGenKey de la API de Win32. Esta clave se exporta mediante CryptExportKey, se cifra con la clave de segundo nivel y el resultado se adjunta al archivo cifrado.
 
-
-Ryuk utiliza un modelo de cifrado de tres niveles. El primer nivel (base) es el cifrado asimétrico con el par de claves RSA que poseen los atacantes. La clave privada de este par de claves no está disponible para la víctima hasta que se adquiere un descifrador. El segundo nivel es un par de claves RSA por víctima. La mayoría de los ransomware generan este par de claves durante el proceso de cifrado y cifran la clave privada resultante utilizando la clave global de nivel superior. Con Ryuk, el ransomware llega con el par de claves preinstalado y la clave privada precifrada. El tercer nivel es una clave de cifrado simétrico AES estándar generada para cada archivo de la víctima mediante la función CryptGenKey de la API de Win32. Esta clave se exporta mediante CryptExportKey, se cifra con la clave de segundo nivel y el resultado se adjunta al archivo cifrado.
-
-El ransomware Ryuk suele añadir la extensión estándar ".ryk" a los archivos cifrados. Existe una variante que no añade ninguna extensión especial a los archivos, pero utiliza el mismo cifrado. Un archivo cifrado seguiría el siguiente patrón (ejemplo de un documento de Word):
+- El ransomware Ryuk suele añadir la extensión estándar ".ryk" a los archivos cifrados. Existe una variante que no añade ninguna extensión especial a los archivos, pero utiliza el mismo cifrado. Un archivo cifrado seguiría el siguiente patrón (ejemplo de un documento de Word):
 filename.doc.ryk
 
+- La <a href="https://cyberint.com/blog/techtalks/ryuk-crypto-ransomware/" target="blank"> siguiente fuente </a> incluye listas de IOC (indicadores de riesgo) de malware, IPs de C2 (command and control) y dominios de C2 vinculados a Ryuk y los grupos atacantes, susceptibles de ser bloqueados y así disminuir el riesgo de ataque. 
 
 ## Algunos ataques conocidos
 
@@ -72,10 +76,11 @@ Ataque a Tribune Publishing: En 2018, Ryuk se propagó a varios periódicos de E
 
 En España:
 - <a href="https://www.itdigitalsecurity.es/actualidad/2019/11/prosegur-la-ultima-victima-del-ransomware-ryuk" target="_blank"> Ataque a Prosegur </a>(NOV/2019).
+- El Hospital de Torrejón de la Comunidad de Madrid confirmó en enero del 2020 el <a href="https://www.xataka.com/seguridad/ransomware-ataca-hospitales-espana-torrejon-primero-afectado-lleva-varios-dias-acceso-a-su-sistema-informatico" target="_blank"> ataque de sus sistemas informáticos</a>, al parecer debido a un virus que encajaría con las caracteríticas de Ryuk.
 - Uno de los <a href="https://protecciondatos-lopd.com/empresas/ryuk-ransomware/" target="_blank">ataques más conocidos</a> y que generó un gran impacto fue el que realizó sobre Servicio Público de Empleo Estatal (SEPE) en España.
 
 
-## Rescates y técnicas de negociación empleadas
+## Rescates
 
 Normalmente la nota de rescate se deja en un archivo nombrado como <a href="https://www.ransomlook.io/notes/ryuk" target="_blank">RyukReadMe.txt</a>
 
@@ -92,7 +97,7 @@ Obviamente no hay que pagar nunca un rescate ya que:
 Aun así muchas víctimas (sobretodo empresas pequeñas y medianas) pagan  rescates para recuperar sus datos:
 <https://www.darkreading.com/cyberattacks-data-breaches/how-to-negotiate-with-ransomware-attackers>
 
-Casi cada aparición del malware utilizó una billetera única. Poco después de que se realizara el pago del rescate, los fondos se dividieron para después transferirse a través de muchas otras cuentas.
+Casi cada aparición del malware utilizó una billetera única. Poco después de que se realizara el pago del rescate, los fondos se dividieron para después transferirse a través de muchas otras cuentas:
 <https://www.itdigitalsecurity.es/vulnerabilidades/2018/08/ryuk-el-ransomware-sucesor-de-hermes-que-ya-ha-recaudado-mas-de-600000-dolares>
 
 
