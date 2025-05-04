@@ -14,14 +14,14 @@ Ryuk está basado en otro ransomware llamado Hermes (Lazarus group):
 
 El ransomware Ryuk es más lucrativo que su predecesor. Se dirige a grandes organizaciones y agencias gubernamentales que terminan pagando grandes cantidades. La verdad es que, sin los grandes beneficios, procesar los ataques de Ryuk no es sostenible. Implica un alto grado de procesos manuales (explotación directa, solicitudes de pago manejadas por correo electrónico, etc.) y los atacantes no quieren perder el tiempo si el ROI no es bueno.
 
-Sospechoso de ser un solo grupo vinculado a la inteligencia de Corea del Norte, los piratas informáticos detrás del amenazante ransomware Ryuk en realidad se extienden a través de dos o más organizaciones cibercriminales prolíficas, que parecen provenir de Rusia o antiguos estados satélites.
+En un principio se sospechó que su operador fuese un solo grupo vinculado a la inteligencia de Corea del Norte, dados los antecedentes de Hermes, aunque parece que los piratas informáticos detrás del amenazante ransomware Ryuk en realidad se extienden a través de dos o más organizaciones cibercriminales prolíficas, que parecen provenir de Rusia o antiguos estados satélites. Se han encontrado puebas que su principal operador es el grupo <a href="https://attack.mitre.org/groups/G0102/" target="_blank">Wizard Spider</a>
 
 - Algunas de las informaciones de este análisis pertenencen a las conclusiones del TFM de Ciberseguridad de la UNED: 'Análisis del ransomware Ryuk, impacto en los sistemas afectados y técnicas API Hooking y de aprendizaje automático como medidas de mitigación ante el ransomware', realizado por Héctor Santamaría Claro
 <https://e-spacio.uned.es/entities/publication/2512f1be-f2c6-4345-9023-825dc1f273eb>
 
 ## Funcionamiento
 
-El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección.
+El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección. Ryuk depende de todo un sistema de malware empleado para su entrada y propagación.
 Borrar:<https://protecciondatos-lopd.com/empresas/ryuk-ransomware/>
 
 ### Vídeo: Funcionamiento de Ryuk
@@ -37,8 +37,10 @@ La mayoría de los ataques de Ryuk Ransomware se pueden rastrear hasta el acceso
 
 Presentación del malware Emotet, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
 <a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank">Presentación Emotet</a>
-La botnet de EMOTET fue supuestamente desmantelada en enero de 2021
+Según varias informaciones, la botnet de EMOTET fue supuestamente desmantelada en enero de 2021
 <https://blog.elhacker.net/2021/01/europol-desmantela-emotet-la-botnet-de-malware-mas-grande-del-mundo-troyano-bancario.html>
+Es por ese y otros motivos que el que parece ser el sucesor de RYUK, Conti, utiliza otros vectores de ataque y malware de apoyo para su cometido
+<a href="https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/" target="_blank">Conti, el sucesor deRyuk</a>
 
 ### Propagación: TrickBot
 Borrar:<https://protecciondatos-lopd.com/empresas/trickbot/>
@@ -86,5 +88,4 @@ Aun así muchas víctimas (sobretodo empresas pequeñas y medianas) pagan  resca
 Casi cada aparición del malware utilizó una billetera única. Poco después de que se realizara el pago del rescate, los fondos se dividieron para después transferirse a través de muchas otras cuentas.
 <https://www.itdigitalsecurity.es/vulnerabilidades/2018/08/ryuk-el-ransomware-sucesor-de-hermes-que-ya-ha-recaudado-mas-de-600000-dolares>
 
-### El sucesor de RYUK: Conti ransomware
-<https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/>
+
