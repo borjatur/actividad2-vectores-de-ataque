@@ -35,13 +35,19 @@ Con este tipo de correos se adjuntaría algun archivo de Office, que al abrirlo,
 Una vez en el equipo de la víctima, este troyano puede descargar malware adicional en el equipo infectado, pero su misón principal es recuperar y ejecutar Trickbot, cuya carga útil principal es spyware. 
 - <a href="./assets/emotet-the-enduring-and-persistent-threat-to-the-hph-tlpclear.pdf" target="_blank"> Presentación del malware Emotet </a>, considerado como uno de los peores malwares y una parte importante del ecosistema cibercriminal.
 - Según varias informaciones, la botnet de EMOTET fue supuestamente <a href="https://blog.elhacker.net/2021/01/europol-desmantela-emotet-la-botnet-de-malware-mas-grande-del-mundo-troyano-bancario.html" target="_blank"> desmantelada</a> en enero de 2021
-- Es por ese y otros motivos que el que parece ser el sucesor de RYUK, <a href="https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/" target="_blank">Conti</a>, utiliza otros vectores de ataque y malware de apoyo para su cometido
 
+## Propagación: TrickBot
 
-## Propagación: TrickBot y Bazaarloader
+TrickBot es un tipo de malware bancario troyano diseñado para robar información financiera de los usuarios infectando ordenadores. Muchas de sus características fueron inspiradas por otro troyano bancario llamado Dyreza. Desde junio de 2019, se observó una relación cada vez más estrecha entre las infecciones iniciales de TrickBot y los eventuales ataques de ransomware Ryuk.
 
-Gracias a Emotet, Trickbot entra en el sistema:
-- Se ejecuta y recopila credenciales
+TrickBot utiliza un enfoque modular para permitir a los atacantes agregar rápidamente funcionalidad al troyano base según sea necesario una vez que una máquina está infectada. Los atacantes aprovechan los módulos para agregar una variedad de funcionalidades y nuevos vectores de ataque.
+
+Los módulos se descargan de un servidor de Comando y Control (C2) en la máquina infectada en forma de archivos DLL y un archivo de configuración. Estos servidores C2 generalmente están alojados en enrutadores secuestrados y cambian constantemente a medida que las listas actualizadas de servidores C2 se envían a máquinas infectadas por TrickBot, lo que dificulta el uso de reglas de bloqueo de IP y otras técnicas de mitigación.
+
+Dado que los módulos se pueden agregar a TrickBot después de la implementación, el tamaño de la carga útil se puede reducir drásticamente al incluir solo lo necesario para establecerse en el sistema y luego descargar módulos adicionales una vez que la máquina se ha infectado.
+
+Algunas de las funciones de Trickbot, utilizadas por Ryuk son:
+- Extrae las credenciales de inicio de sesión de acceso remoto y proporciona al grupo criminal acceso manual
 - Roba credenciales para propagarse por la red mediante PsExec, WMI, PowerShell o directivas de grupo
 - Realiza escalada de privilegios
 - Intenta evadir los controles de seguridad de endpoints
@@ -49,11 +55,8 @@ Gracias a Emotet, Trickbot entra en el sistema:
 - Obtiene persistencia mediante el "Programador de Tareas" y permite acceder a los atacantes lateralmente a activos críticos conectados a la red
 - Dado que TrickBot es un troyano bancario, también es probable que haya recopilado y exfiltrado información de cuentas financieras en los sistemas infectados antes de instalar la infección con el ransomware Ryuk
 
-Bazaarloader:
 
-Borrar:<https://protecciondatos-lopd.com/empresas/trickbot/>
-
-## Proceso Infección y Cifrado
+## Infección, Cifrado y C2
 
 Una vez en un sistema y gracias al control y privilegos ganados con Trickbot, Ryuk escanea los sistemas infectados y cifra casi todos los archivos, directorios, recursos de la red, unidades, etc... atacando específicamente las copias de seguridad. Hay que tener en cuenta que la recuperación del sistema se ha inhibido previamente mediante la destrucción de copias de instantáneas de volumen (VSS) a través de vssadmin. 
 
@@ -62,7 +65,7 @@ Una vez en un sistema y gracias al control y privilegos ganados con Trickbot, Ry
 - El ransomware Ryuk suele añadir la extensión estándar ".ryk" a los archivos cifrados. Existe una variante que no añade ninguna extensión especial a los archivos, pero utiliza el mismo cifrado. Un archivo cifrado seguiría el siguiente patrón (ejemplo de un documento de Word):
 filename.doc.ryk
 
-- La <a href="https://cyberint.com/blog/techtalks/ryuk-crypto-ransomware/" target="blank"> siguiente fuente </a> incluye listas de IOC (indicadores de riesgo) de malware, IPs de C2 (command and control) y dominios de C2 vinculados a Ryuk y los grupos atacantes, susceptibles de ser bloqueados y así disminuir el riesgo de ataque. 
+- Tras la infección exitosa de los objetivos, el malware mantiene una conexión de comando y control (C2) a una variedad de IP y dominios diferentes, incluida la baliza Cobalt Strike, que permite a los atacantes mantener el control total de los recursos infectados. La <a href="https://cyberint.com/blog/techtalks/ryuk-crypto-ransomware/" target="blank"> siguiente fuente </a> pudo trazar una lista potencial de servidores y dominios C2 utilizados por el grupo UNC1878 y vinculados a Trickbot y Ryuk, utilizando Cobalt Strike como canal de comunicación. Incluye listas de IOC (indicadores de riesgo) de malware, IPs de C2 (command and control) y dominios de C2 vinculados a Ryuk y los grupos atacantes, susceptibles de ser bloqueados y así disminuir el riesgo de ataque. 
 
 ## Algunos ataques conocidos
 
@@ -99,3 +102,12 @@ Aun así muchas víctimas (sobretodo empresas pequeñas y medianas) pagan  resca
 
 Casi cada aparición del malware utilizó una billetera única. Poco después de que se realizara el pago del rescate, los fondos se dividieron para después transferirse a través de muchas otras cuentas:
 <https://www.itdigitalsecurity.es/vulnerabilidades/2018/08/ryuk-el-ransomware-sucesor-de-hermes-que-ya-ha-recaudado-mas-de-600000-dolares>
+
+## Conti, el sucesor de Ryuk
+
+- El sucesor de RYUK, <a href="https://www.logpoint.com/en/blog/detecting-conti-ransomware-the-successor-of-infamous-ryuk/" target="_blank">Conti</a>, utiliza vectores de ataque y malware de apoyo similares para su cometido.
+- Más <a href="https://www.trmlabs.com/resources/blog/analysis-corroborates-suspected-ties-between-conti-and-ryuk-ransomware-groups-and-wizard-spider" target="blank">información</a> sobre `Conti` y su relacion con `Ryuk` y
+`WizardSpider`.
+- Más <a href="https://www.hhs.gov/sites/default/files/conti-ransomware-health-sector.pdf" target="blank">información</a> sobre `Conti` y su relacion con los ataques al sector sanitario.
+  
+<img src="./assets/conti.png />
