@@ -60,6 +60,9 @@ Una vez en un sistema y gracias al control y privilegos ganados con Trickbot, Ry
 
 - Ryuk utiliza un modelo de cifrado de tres niveles. El primer nivel (base) es el cifrado asimétrico con el par de claves RSA que poseen los atacantes. La clave privada de este par de claves no está disponible para la víctima hasta que se adquiere un descifrador. El segundo nivel es un par de claves RSA por víctima. La mayoría de los ransomware generan este par de claves durante el proceso de cifrado y cifran la clave privada resultante utilizando la clave global del primer nivel. Con Ryuk, el ransomware llega con el par de claves preinstalado y la clave privada precifrada. El tercer nivel es una clave de cifrado simétrico AES estándar generada para cada archivo de la víctima mediante la función CryptGenKey de la API de Win32. Esta clave se exporta mediante CryptExportKey, se cifra con la clave de segundo nivel y el resultado se adjunta al archivo cifrado.
 
+- Ryuk comparte una característica con el ransomware Hermes: durante el cifrado, añade un marcador en el archivo cifrado con la palabra clave "HERMES". Ryuk comprueba el marcador HERMES antes de cifrar cualquier archivo para comprobar si ya se ha cifrado. La siguiente captura de pantalla muestra el marcador HERMES y la clave AES cifrada adjunta al final del archivo cifrado:
+<img src="./assets/Hermes_encrypted file.png" />
+
 - El ransomware Ryuk suele añadir la extensión estándar ".ryk" a los archivos cifrados. Existe una variante que no añade ninguna extensión especial a los archivos, pero utiliza el mismo cifrado. Un archivo cifrado seguiría el siguiente patrón (ejemplo de un documento de Word):
 filename.doc.ryk
 
