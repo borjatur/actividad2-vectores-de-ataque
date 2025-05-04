@@ -109,5 +109,4 @@ Casi cada aparición del malware utilizó una billetera única. Poco después de
 - Más <a href="https://www.trmlabs.com/resources/blog/analysis-corroborates-suspected-ties-between-conti-and-ryuk-ransomware-groups-and-wizard-spider" target="blank">información</a> sobre `Conti` y su relacion con `Ryuk` y
 `WizardSpider`.
 - Más <a href="https://www.hhs.gov/sites/default/files/conti-ransomware-health-sector.pdf" target="blank">información</a> sobre `Conti` y su relacion con los ataques al sector sanitario.
-  
-<img src="./assets/conti.png />
+<img src="./assets/conti.png" />
