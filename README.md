@@ -28,7 +28,7 @@ Los siguientes puntos quedarían cubiertos en el apartado `02 Demostración ataq
 
 ### 3) Análisis de un ransomware: RYUK
 
-Análisis de de cómo funciona un ransomware especifico, RYUK:
+Análisis de de cómo funciona un ransomware especifico, RYUK, detallado en el apartado `03 Análisis Ryuk`:
 - Origen
 - Vectores de ataque
 - Infección y propagación
