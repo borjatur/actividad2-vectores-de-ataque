@@ -5,7 +5,7 @@ El ransomware Ryuk no es el comienzo, sino el final de un ciclo de infección. R
 
 ## Funcionamiento
 
-<img src="../01_Vectores de ataque típicos y tipos de ransomware/assets/Ataque Emotet-TrickBot-Ryuk.jpg" />
+<img src="../01 Vectores de ataque típicos y tipos de ransomware/assets/Ataque Emotet-TrickBot-Ryuk.jpg" />
 
 - En <a href="https://www.youtube.com/watch?v=PZqM8pwrLdQ&t=1368s" target="_blank">este vídeo </a>se expone de manera muy clara el funcionamiento de Ryuk
 - Otra fuente importante para este análisis es el trabajo de fin de máster de Ciberseguridad de la UNED: <a href="https://e-spacio.uned.es/entities/publication/2512f1be-f2c6-4345-9023-825dc1f273eb" target="_blank"> 'Análisis del ransomware Ryuk</a>, impacto en los sistemas afectados y técnicas API Hooking y de aprendizaje automático como medidas de mitigación ante el ransomware', realizado por Héctor Santamaría Claro
