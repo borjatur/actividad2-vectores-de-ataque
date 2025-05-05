@@ -36,7 +36,7 @@ Una vez en el equipo de la víctima, este troyano puede descargar malware adicio
 
 ## Propagación: TrickBot
 
-`TrickBot` es un tipo de malware bancario troyano diseñado para robar información financiera de los usuarios infectando ordenadores. Muchas de sus características fueron inspiradas por otro troyano bancario llamado `Dyreza`. Desde junio de 2019, se observó una relación cada vez más estrecha entre las infecciones iniciales de TrickBot y los eventuales ataques de ransomware Ryuk.
+`TrickBot` es un tipo de <a href="https://www.crowdstrike.com/en-us/cybersecurity-101/malware/trickbots/"> malware bancario troyano </a> diseñado para robar información financiera de los usuarios infectando ordenadores. Muchas de sus características fueron inspiradas por otro troyano bancario llamado `Dyreza`. Desde junio de 2019, se observó una relación cada vez más estrecha entre las infecciones iniciales de TrickBot y los eventuales ataques de ransomware Ryuk.
 
 TrickBot utiliza un enfoque modular para permitir a los atacantes agregar rápidamente funcionalidad al troyano base según sea necesario una vez que una máquina está infectada. Los atacantes aprovechan los módulos para agregar una variedad de funcionalidades y nuevos vectores de ataque.
 
@@ -53,6 +53,7 @@ Algunas de las funciones de Trickbot, utilizadas por Ryuk son:
 - Obtiene persistencia mediante el "Programador de Tareas" y permite acceder a los atacantes lateralmente a activos críticos conectados a la red
 - Dado que TrickBot es un troyano bancario, también es probable que haya recopilado y exfiltrado información de cuentas financieras en los sistemas infectados antes de instalar la infección con el ransomware Ryuk
 
+En <a href="https://github.com/r0ck3r008/Ryuk/blob/master/report/FinalReport.pdf" >este informe</a> y también en <a href="https://www.securityartwork.es/wp-content/uploads/2017/07/Trickbot-report-S2-Grupo.pdf">este reporte</a> se detallan distintas DLLs y técnicas que utiliza el malware para tomar control del sistema infectado.
 
 ## Infección, Cifrado y C2
 
